@@ -24,15 +24,23 @@ div#arrow-next {
     top: 185px;
     right: 0;
 }
-  .arrow {
+.arrow:hover {
+    background: #00000091;
+}
+.arrow {
     cursor: pointer;
     position: absolute;
-    margin:0px 10px;
+    margin: 0px 10px;
+    transition: .2s;
     background: #434343c4;
     z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: white;
-    font-size: 25px;
-    padding: 5px;
+    font-size: 28px;
+    width: 28px;
+    height: 28px;
     border-radius: 52px;
 }
 
