@@ -21,7 +21,7 @@ function nextSlide(){
 
 function prevSlide(){
     slides[currentSlide].style.display = "none";
-    (currentSlide != 0) ? currentSlide-- : currentSlide = 2;
+    (currentSlide != 0) ? currentSlide-- : currentSlide = slides.lenght-1;
     slides[currentSlide].style.display = "block";
 }
 
