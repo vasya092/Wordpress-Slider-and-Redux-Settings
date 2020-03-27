@@ -2,7 +2,7 @@
 Добавление шорткода слайдера и опций в родительскую тему Twenty Twenty Wordpress
 
 ## Установка
-* Перенести папки в дирректирию темы
+* Перенести папки assets и inc в директорию темы
 * Код из function.php добавить в function.php темы.
 ## Shorcode
 
@@ -13,6 +13,14 @@
   [img url='']
   [img]
 [wp_sl]
+```
+
+Пример использования:
+```
+[wp_sl]
+  [img]
+  [img url='https://i.ytimg.com/vi/dqUGFsuZNu8/sddefault.jpg']
+[/wp_sl]
 ```
 
 ## Redux Framework Config
