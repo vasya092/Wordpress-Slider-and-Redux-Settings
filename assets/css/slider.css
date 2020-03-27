@@ -1,0 +1,49 @@
+body{
+    margin:0px;
+    padding:0px;
+}
+.slider-element img{
+    object-fit:cover;
+    height:400px;
+    width: 100%;
+}
+.slider-element{
+position:absolute;
+width:100%;
+}
+
+#slider-block{
+    height:400px;
+    position: relative;
+}
+div#arrow-prev {
+    top: 185px;
+    left: 0;
+}
+div#arrow-next {
+    top: 185px;
+    right: 0;
+}
+  .arrow {
+    cursor: pointer;
+    position: absolute;
+    margin:0px 10px;
+    background: #434343c4;
+    z-index: 2;
+    color: white;
+    font-size: 25px;
+    padding: 5px;
+    border-radius: 52px;
+}
+
+.anim{
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name:fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade{
+from{opacity: .4;}
+to {opacity: 1;}
+}
