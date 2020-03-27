@@ -15,6 +15,14 @@
 [wp_sl]
 ```
 
+Пример использования:
+```
+[wp_sl]
+  [img]
+  [img url='https://i.ytimg.com/vi/dqUGFsuZNu8/sddefault.jpg']
+[/wp_sl]
+```
+
 ## Redux Framework Config
 ```
 inc/theme-config.php
