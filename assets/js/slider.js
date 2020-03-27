@@ -1,4 +1,3 @@
-var domReady = (function (){
 var currentSlide = 0;
 
 let slides = document.getElementsByClassName("slider-element");
@@ -10,23 +9,22 @@ function InitSlider(){
     console.log(slides[0]);
 }
 
-document.getElementById('arrow-next').addEventListener('click', nextSlide);
-document.getElementById('arrow-prev').addEventListener('click', prevSlide);
+document.getElementById('arrow-next').addEventListener('click', moveSlide.bind(null,1));
+document.getElementById('arrow-prev').addEventListener('click', moveSlide.bind(null,-1));
 
-function nextSlide(){
+
+function moveSlide(value,event){
+    
     slides[currentSlide].style.display = "none";
-    (currentSlide < slides.length-1) ? currentSlide++ : currentSlide = 0;
+    if(value == 1){
+        (currentSlide < slides.length-1) ? currentSlide++ : currentSlide = 0;
+    }
+    else{ 
+        (currentSlide != 0) ? currentSlide-- : currentSlide = slides.length-1;
+    }
     slides[currentSlide].style.display = "block";
 }
-
-function prevSlide(){
-    slides[currentSlide].style.display = "none";
-    (currentSlide != 0) ? currentSlide-- : currentSlide = slides.lenght-1;
-    slides[currentSlide].style.display = "block";
-}
-
 
 InitSlider();
 
-let timerId = setInterval(() => nextSlide(), 5000);
-})()
+let timerId = setInterval(() => moveSlide(1), 5000);
